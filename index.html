@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milton Rodent Shield | High-End Rodent Defense & Exclusion Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: {
+                            950: '#070a11',
+                            900: '#0b0f19',
+                            800: '#131b2e',
+                            700: '#1f2a44',
+                        },
+                        amberGlow: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        emeraldGlow: {
+                            400: '#34d399',
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border-radius: 9999px;
+        }
+        .glass-card {
+            background: rgba(19, 27, 46, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+        }
+        .glass-card:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.1);
+        }
+        .article-content p {
+            margin-bottom: 1.4rem;
+            line-height: 1.9;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+        .article-content h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .article-content h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fbbf24;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.4rem;
+            padding-left: 1.5rem;
+        }
+        .article-content ul { list-style-type: disc; }
+        .article-content ol { list-style-type: decimal; }
+        .article-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.75;
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-obsidian-900 text-slate-100 min-h-screen flex flex-col selection:bg-amberGlow-500 selection:text-obsidian-950">
+
+    <header class="sticky top-0 z-40 bg-obsidian-950/90 backdrop-blur-xl border-b border-amberGlow-500/20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-22 py-4">
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3.5 cursor-pointer" onclick="navigateTo('home')">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-amberGlow-600 via-amberGlow-500 to-emeraldGlow-500 rounded-2xl flex items-center justify-center text-obsidian-950 shadow-lg shadow-amberGlow-500/20 font-bold">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold font-display tracking-tight text-white">MILTON <span class="text-amberGlow-400">RODENT SHIELD</span></span>
+                        <span class="block text-[10px] uppercase tracking-widest text-emeraldGlow-400 font-semibold">Executive Rodent Exclusion Portal</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-1 bg-obsidian-800/80 p-1.5 rounded-2xl border border-slate-800">
+                    <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300">Home</button>
+                    <button onclick="navigateTo('about')" id="nav-about" class="nav-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300">About Us</button>
+                    <button onclick="navigateTo('blog')" id="nav-blog" class="nav-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300">Research & Blog</button>
+                    <button onclick="navigateTo('contact')" id="nav-contact" class="nav-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300">Contact Us</button>
+                </nav>
+
+                <!-- Header Right CTA -->
+                <div class="hidden md:flex items-center space-x-5">
+                    <a href="tel:18005550199" class="text-xs font-bold text-slate-300 hover:text-amberGlow-400 flex items-center gap-2 bg-obsidian-800 px-4 py-2.5 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-phone-volume text-amberGlow-400"></i> (905) 878-9900
+                    </a>
+                    <button onclick="navigateTo('contact')" class="bg-gradient-to-r from-amberGlow-500 to-amberGlow-600 hover:from-amberGlow-400 hover:to-amberGlow-500 text-obsidian-950 font-extrabold text-sm px-6 py-2.5 rounded-xl shadow-lg shadow-amberGlow-500/25 transition-all duration-300 hover:scale-105">
+                        Book Portal Audit
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-3 rounded-xl bg-obsidian-800 text-amberGlow-400 border border-slate-800 focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian-950 border-b border-amberGlow-500/20 px-6 py-6 space-y-3">
+            <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-obsidian-800 hover:text-amberGlow-400">Home</button>
+            <button onclick="navigateTo('about')" class="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-obsidian-800 hover:text-amberGlow-400">About Us</button>
+            <button onclick="navigateTo('blog')" class="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-obsidian-800 hover:text-amberGlow-400">Research & Blog</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-3 rounded-xl text-base font-semibold text-slate-200 hover:bg-obsidian-800 hover:text-amberGlow-400">Contact Us</button>
+            <button onclick="navigateTo('contact')" class="w-full mt-4 bg-amberGlow-500 text-obsidian-950 font-bold py-3.5 rounded-xl text-center">Book Portal Audit</button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- PAGE 1: HOME SECTION -->
+        <section id="page-home" class="page-content">
+            <!-- Dark Luxury Split Hero Banner -->
+            <div class="relative py-20 lg:py-28 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-obsidian-800 via-obsidian-900 to-obsidian-950 border-b border-amberGlow-500/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid lg:grid-cols-12 gap-12 items-center">
+                        
+                        <!-- Left Hero Content -->
+                        <div class="lg:col-span-7">
+                            <span class="inline-flex items-center gap-2.5 bg-amberGlow-500/10 border border-amberGlow-500/30 text-amberGlow-400 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest mb-6">
+                                <span class="w-2 h-2 rounded-full bg-emeraldGlow-400 animate-ping"></span> Structural Rodent Defense System
+                            </span>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight leading-tight mb-6 text-white">
+                                Next-Gen Mouse Exclusion & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberGlow-400 via-amberGlow-500 to-emeraldGlow-400">Thermal Defense Matrix</span>
+                            </h1>
+                            <p class="text-slate-300 text-lg mb-8 leading-relaxed max-w-2xl">
+                                Milton’s luxury residential and commercial property protection portal. Combining infrared thermography, acoustic detection, and high-tensile steel structural barriers to permanently lock out mice.
+                            </p>
+
+                            <!-- Live Stat Counter Cards -->
+                            <div class="grid grid-cols-3 gap-4 mb-8">
+                                <div class="glass-card p-4 rounded-2xl text-center">
+                                    <span class="block text-2xl sm:text-3xl font-extrabold font-display text-amberGlow-400">100%</span>
+                                    <span class="text-[11px] text-slate-400 uppercase font-semibold">Exclusion Guarantee</span>
+                                </div>
+                                <div class="glass-card p-4 rounded-2xl text-center">
+                                    <span class="block text-2xl sm:text-3xl font-extrabold font-display text-emeraldGlow-400">1/4"</span>
+                                    <span class="text-[11px] text-slate-400 uppercase font-semibold">Steel Mesh Proofing</span>
+                                </div>
+                                <div class="glass-card p-4 rounded-2xl text-center">
+                                    <span class="block text-2xl sm:text-3xl font-extrabold font-display text-amberGlow-400">2,400+</span>
+                                    <span class="text-[11px] text-slate-400 uppercase font-semibold">Halton Homes Protected</span>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button onclick="navigateTo('blog')" class="bg-gradient-to-r from-amberGlow-500 to-amberGlow-600 hover:from-amberGlow-400 hover:to-amberGlow-500 text-obsidian-950 px-8 py-4 rounded-2xl font-extrabold text-base shadow-xl shadow-amberGlow-500/20 transition duration-300 text-center flex items-center justify-center gap-2">
+                                    Explore Research Articles <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <button onclick="navigateTo('about')" class="border border-slate-700 hover:border-amberGlow-500/50 bg-obsidian-800/60 text-slate-200 px-8 py-4 rounded-2xl font-bold text-base transition duration-300 text-center">
+                                    View Technical Equipment
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Interactive Cost Estimator Tool -->
+                        <div class="lg:col-span-5">
+                            <div class="glass-card p-8 rounded-3xl relative overflow-hidden shadow-2xl border border-amberGlow-500/30">
+                                <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-amberGlow-500/20 text-amberGlow-400 rounded-xl flex items-center justify-center text-xl">
+                                            <i class="fa-solid fa-calculator"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-lg font-bold font-display text-white">Instant Inspection Estimator</h3>
+                                            <p class="text-xs text-slate-400">Milton & Halton Region Properties</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] bg-emeraldGlow-500/20 text-emeraldGlow-400 border border-emeraldGlow-500/30 font-bold px-2.5 py-1 rounded-full uppercase">Live Tool</span>
+                                </div>
+
+                                <div class="space-y-5">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Property Size (Sq. Ft.)</label>
+                                        <input type="range" id="sqft-slider" min="1000" max="6000" step="250" value="2500" oninput="updateEstimator()" class="w-full accent-amberGlow-500 cursor-pointer">
+                                        <div class="flex justify-between text-xs font-mono text-amberGlow-400 mt-1">
+                                            <span>1,000 sq ft</span>
+                                            <span id="sqft-val" class="font-bold text-base">2,500 sq ft</span>
+                                            <span>6,000+ sq ft</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Structure Type</label>
+                                        <select id="property-type" onchange="updateEstimator()" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-amberGlow-500">
+                                            <option value="1">Detached Single Family House</option>
+                                            <option value="0.85">Townhome / Semi-Detached</option>
+                                            <option value="1.3">Commercial Retail / Restaurant</option>
+                                            <option value="1.5">Industrial Warehouse</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Service Scope Needed</label>
+                                        <div class="grid grid-cols-2 gap-2 text-xs">
+                                            <label class="flex items-center gap-2 bg-obsidian-950 p-2.5 rounded-xl border border-slate-800 cursor-pointer">
+                                                <input type="checkbox" id="check-thermal" checked onchange="updateEstimator()" class="accent-amberGlow-500">
+                                                <span>Thermal Audit</span>
+                                            </label>
+                                            <label class="flex items-center gap-2 bg-obsidian-950 p-2.5 rounded-xl border border-slate-800 cursor-pointer">
+                                                <input type="checkbox" id="check-attic" checked onchange="updateEstimator()" class="accent-amberGlow-500">
+                                                <span>Attic Bio-Sanitize</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 rounded-2xl bg-obsidian-950 border border-slate-800 flex justify-between items-center">
+                                        <div>
+                                            <span class="block text-[10px] uppercase text-slate-400 font-semibold">Estimated Inspection Package</span>
+                                            <span id="estimated-price" class="text-2xl font-extrabold font-display text-amberGlow-400">$349 - $449</span>
+                                        </div>
+                                        <button onclick="navigateTo('contact')" class="bg-amberGlow-500 hover:bg-amberGlow-400 text-obsidian-950 font-bold text-xs px-4 py-2.5 rounded-xl transition">
+                                            Lock Price
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features Showcase -->
+            <div class="py-20 bg-obsidian-900 border-b border-amberGlow-500/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-xs font-bold text-amberGlow-400 uppercase tracking-widest bg-amberGlow-500/10 border border-amberGlow-500/20 px-3.5 py-1.5 rounded-full">Engineering Excellence</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold font-display text-white mt-3">Advanced Rodent Exclusion Architecture</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glass-card p-8 rounded-3xl transition duration-300">
+                            <div class="w-14 h-14 bg-amberGlow-500/10 text-amberGlow-400 border border-amberGlow-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-display text-white mb-3">Infrared & Acoustic Detection</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">High-resolution FLIR cameras and ultrasonic sensors pinpoint mouse nests behind drywall without tearing open walls.</p>
+                            <button onclick="openArticleModal(2)" class="text-amberGlow-400 font-bold text-xs hover:underline flex items-center gap-2">
+                                Read Acoustic Guide <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-3xl transition duration-300">
+                            <div class="w-14 h-14 bg-amberGlow-500/10 text-amberGlow-400 border border-amberGlow-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                                <i class="fa-solid fa-biohazard"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-display text-white mb-3">HEPA Bio-Sanitization</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">Full attic decontamination using bio-enzymatic fogging to strip urine pheromones and remove contaminated insulation.</p>
+                            <button onclick="openArticleModal(3)" class="text-amberGlow-400 font-bold text-xs hover:underline flex items-center gap-2">
+                                Read Biohazard Guide <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-3xl transition duration-300">
+                            <div class="w-14 h-14 bg-amberGlow-500/10 text-amberGlow-400 border border-amberGlow-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-display text-white mb-3">Eco-Friendly Non-Toxic IPM</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">One-way mechanical exclusion doors and non-corrosive steel mesh barriers keep pets and children 100% safe from indoor poisons.</p>
+                            <button onclick="openArticleModal(5)" class="text-amberGlow-400 font-bold text-xs hover:underline flex items-center gap-2">
+                                Read Eco Protocol <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Testimonials Section -->
+            <div class="py-20 bg-obsidian-950 border-b border-slate-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <span class="text-xs font-bold text-emeraldGlow-400 uppercase tracking-widest">Verified Reviews</span>
+                        <h2 class="text-3xl font-extrabold font-display text-white mt-2">What Milton Homeowners Say</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex text-amberGlow-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-4">"The thermal camera inspection located a hidden mouse nest in our roof soffit that two other companies missed. Sealed it with steel mesh and zero issues since!"</p>
+                            <div class="text-xs font-bold text-white">— Michael T., Harrison Neighbourhood, Milton</div>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex text-amberGlow-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-4">"Their attic bio-sanitization team replaced our urine-damaged insulation in one day. Extremely professional dark-mode portal tracking and clean work!"</p>
+                            <div class="text-xs font-bold text-white">— Elena R., Scott Community, Milton</div>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex text-amberGlow-400 text-xs mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-4">"As a restaurant manager in Milton, maintaining HACCP compliance is critical. Their commercial bait station mapping and quarterly audits keep us 100% compliant."</p>
+                            <div class="text-xs font-bold text-white">— Marcus B., Main St. Commercial Area</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: ABOUT US SECTION -->
+        <section id="page-about" class="page-content hidden">
+            <div class="bg-obsidian-950 py-16 border-b border-amberGlow-500/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-xs font-bold text-amberGlow-400 uppercase tracking-widest">Our Engineering Heritage</span>
+                    <h1 class="text-4xl font-extrabold font-display text-white mt-2 mb-4">About Milton Rodent Shield</h1>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-sm">Pioneering non-toxic structural rodent exclusion, infrared diagnostic auditing, and high-performance building protection across Halton Region.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+                <!-- Company Story & Mission -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-bold text-emeraldGlow-400 uppercase tracking-widest">Scientific Precision</span>
+                        <h2 class="text-3xl font-extrabold font-display text-white mt-2 mb-6">Beyond Traditional Extermination</h2>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Milton Rodent Shield was established to modernize structural pest defense. Traditional pest control relies heavily on indoor poison baits that leave decaying rodents inside wall cavities and fail to stop new mice from entering.
+                        </p>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Our team combines structural building knowledge with infrared imaging and non-corrosive steel hardware cloth to physically seal every potential entry point down to 1/4 inch, delivering guaranteed, long-term exclusion.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Company Timeline -->
+                    <div class="glass-card p-8 rounded-3xl space-y-6">
+                        <h3 class="text-xl font-bold font-display text-white border-b border-slate-800 pb-3">Company Milestones</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <span class="bg-amberGlow-500/20 text-amberGlow-400 font-mono text-xs font-bold px-3 py-1 rounded-lg">2018</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Founded in Milton, ON</h4>
+                                    <p class="text-xs text-slate-400">Pioneered infrared thermal auditing for residential rodent entry points.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="bg-amberGlow-500/20 text-amberGlow-400 font-mono text-xs font-bold px-3 py-1 rounded-lg">2021</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Commercial Food IPM Division</h4>
+                                    <p class="text-xs text-slate-400">Expanded commercial HACCP-compliant services for Halton food facilities.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="bg-amberGlow-500/20 text-amberGlow-400 font-mono text-xs font-bold px-3 py-1 rounded-lg">2026</span>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Acoustic & Ultrasonic Fleet</h4>
+                                    <p class="text-xs text-slate-400">Deployed non-invasive wall micro-sensor tracking across 2,400+ properties.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Equipment Showcase -->
+                <div>
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <h2 class="text-2xl font-bold font-display text-white">Our Technical Defense Arsenal</h2>
+                        <p class="text-xs text-slate-400 mt-1">Industrial equipment engineered for precision rodent exclusion</p>
+                    </div>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="bg-obsidian-800/60 p-6 rounded-2xl border border-slate-800 text-center">
+                            <i class="fa-solid fa-camera-retro text-3xl text-amberGlow-400 mb-3"></i>
+                            <h3 class="text-sm font-bold text-white mb-1">FLIR Thermal Optics</h3>
+                            <p class="text-xs text-slate-400">Detects heat loss gradients where mice enter exterior brick weep holes.</p>
+                        </div>
+                        <div class="bg-obsidian-800/60 p-6 rounded-2xl border border-slate-800 text-center">
+                            <i class="fa-solid fa-wave-square text-3xl text-emeraldGlow-400 mb-3"></i>
+                            <h3 class="text-sm font-bold text-white mb-1">Acoustic Sensors</h3>
+                            <p class="text-xs text-slate-400">Listens through drywall for high-frequency scratching inside wall voids.</p>
+                        </div>
+                        <div class="bg-obsidian-800/60 p-6 rounded-2xl border border-slate-800 text-center">
+                            <i class="fa-solid fa-shield text-3xl text-amberGlow-400 mb-3"></i>
+                            <h3 class="text-sm font-bold text-white mb-1">Galvanised Hardware Mesh</h3>
+                            <p class="text-xs text-slate-400">Hot-dipped steel cloth that resists gnawing and weather corrosion.</p>
+                        </div>
+                        <div class="bg-obsidian-800/60 p-6 rounded-2xl border border-slate-800 text-center">
+                            <i class="fa-solid fa-mask-ventilator text-3xl text-emeraldGlow-400 mb-3"></i>
+                            <h3 class="text-sm font-bold text-white mb-1">HEPA Foggers</h3>
+                            <p class="text-xs text-slate-400">Bio-enzymatic misting units that neutralize urine pheromones in attics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: BLOG SECTION -->
+        <section id="page-blog" class="page-content hidden">
+            <div class="bg-obsidian-950 py-16 border-b border-amberGlow-500/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-xs font-bold text-amberGlow-400 uppercase tracking-widest">Knowledge Base & Research</span>
+                    <h1 class="text-4xl font-extrabold font-display text-white mt-2 mb-4">Milton Rodent Defense Research</h1>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-sm">Explore our 5 technical publications (1200-1500+ words each) covering exclusion matrix engineering, thermal diagnostics, attic decontamination, commercial HACCP standards, and eco-friendly IPM.</p>
+
+                    <!-- Search & Filter Controls -->
+                    <div class="max-w-2xl mx-auto mt-8 relative">
+                        <input type="text" id="blog-search" oninput="filterArticles()" placeholder="Search publications (e.g., Thermal, Attic, Commercial, Eco, Matrix)..." class="w-full px-6 py-4 pl-14 rounded-2xl text-slate-100 bg-obsidian-800 border border-slate-700 focus:outline-none focus:border-amberGlow-500 shadow-2xl">
+                        <i class="fa-solid fa-magnifying-glass absolute left-5 top-5 text-slate-400 text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Javascript populates 5 rich cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: CONTACT US SECTION -->
+        <section id="page-contact" class="page-content hidden">
+            <div class="bg-obsidian-950 py-16 border-b border-amberGlow-500/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-xs font-bold text-emeraldGlow-400 uppercase tracking-widest">Connect With Technicians</span>
+                    <h1 class="text-4xl font-extrabold font-display text-white mt-2 mb-4">Contact Milton Rodent Shield</h1>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-sm">Need an immediate property inspection or thermal audit? Schedule a consultation with our technicians.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <!-- Left Details & FAQ -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="glass-card p-8 rounded-3xl space-y-6">
+                            <h3 class="text-xl font-bold font-display text-white">Milton Headquarters</h3>
+                            <div class="flex items-start gap-4 text-xs">
+                                <div class="w-10 h-10 bg-amberGlow-500/20 text-amberGlow-400 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">Office Address</h4>
+                                    <p class="text-slate-400 mt-0.5">420 Child's Drive, Suite 204, Milton, ON L9T 5A2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 text-xs">
+                                <div class="w-10 h-10 bg-amberGlow-500/20 text-amberGlow-400 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">Direct Line</h4>
+                                    <p class="text-slate-400 mt-0.5">(905) 878-9900</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 text-xs">
+                                <div class="w-10 h-10 bg-amberGlow-500/20 text-amberGlow-400 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white">Email Dispatch</h4>
+                                    <p class="text-slate-400 mt-0.5">dispatch@miltonrodentshield.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Accordion Box -->
+                        <div class="glass-card p-8 rounded-3xl space-y-4">
+                            <h4 class="font-bold font-display text-lg text-amberGlow-400">Frequently Asked Questions</h4>
+                            <div class="space-y-3 text-xs">
+                                <div class="border-b border-slate-800 pb-3">
+                                    <p class="font-semibold text-white">Q: How soon can a team perform a thermal audit?</p>
+                                    <p class="text-slate-400 mt-1">A: We offer same-day and next-day emergency dispatch across Milton and Halton Region.</p>
+                                </div>
+                                <div class="border-b border-slate-800 pb-3">
+                                    <p class="font-semibold text-white">Q: Is your steel mesh proofing weather-resistant?</p>
+                                    <p class="text-slate-400 mt-1">A: Yes, we use heavy hot-dipped galvanised hardware mesh designed to withstand freeze-thaw cycles.</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Q: Do you offer written exclusion warranties?</p>
+                                    <p class="text-slate-400 mt-1">A: All full structural exclusion packages carry a written 1-to-3 year renewal warranty.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Multi-Step Dynamic Form -->
+                    <div class="lg:col-span-7 glass-card p-8 sm:p-10 rounded-3xl border border-amberGlow-500/20">
+                        <h3 class="text-2xl font-bold font-display text-white mb-6">Schedule a Structural Audit</h3>
+                        <form onsubmit="handleContactSubmit(event)" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">First & Last Name</label>
+                                    <input type="text" required placeholder="Alex Mercer" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-amberGlow-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Email Address</label>
+                                    <input type="email" required placeholder="alex@example.com" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-amberGlow-500">
+                                </div>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Phone Number</label>
+                                    <input type="tel" required placeholder="(905) 555-0188" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-amberGlow-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Service Type</label>
+                                    <select class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-amberGlow-500">
+                                        <option>Full Home Steel Exclusion & Thermal Audit</option>
+                                        <option>Attic HEPA Decontamination & Bio-Sanitize</option>
+                                        <option>Commercial Restaurant HACCP Rodent IPM</option>
+                                        <option>Non-Toxic Mechanical Relocation Service</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-400 mb-2">Property Notes & Activity Details</label>
+                                <textarea rows="4" required placeholder="Describe rodent sightings, scratching noises, dropping locations, or property layout..." class="w-full px-4 py-3.5 rounded-xl bg-obsidian-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-amberGlow-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-gradient-to-r from-amberGlow-500 to-amberGlow-600 hover:from-amberGlow-400 hover:to-amberGlow-500 text-obsidian-950 font-extrabold px-8 py-4 rounded-xl shadow-lg shadow-amberGlow-500/20 transition duration-300 w-full sm:w-auto">
+                                Submit Audit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- EXECUTIVE VERTICAL SIDE-TAB BLOG MODAL PORTAL -->
+    <div id="article-modal" class="fixed inset-0 z-50 bg-obsidian-950/90 backdrop-blur-2xl hidden overflow-hidden">
+        <div class="h-full max-w-7xl mx-auto flex flex-col lg:flex-row p-4 lg:p-8 gap-6">
+            
+            <!-- Left Side-Tab Selector List (Executive Portal Navigation) -->
+            <div class="w-full lg:w-80 bg-obsidian-900 border border-amberGlow-500/20 rounded-3xl p-6 flex flex-col shrink-0 overflow-y-auto custom-scrollbar">
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+                    <span class="text-xs font-bold font-display text-amberGlow-400 uppercase tracking-widest">Publication Index</span>
+                    <button onclick="closeArticleModal()" class="text-slate-400 hover:text-white p-2">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+                
+                <div id="modal-side-tabs" class="space-y-3 flex-grow">
+                    <!-- Javascript populates side-tab buttons -->
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                    <button onclick="closeArticleModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs py-3 rounded-xl transition">
+                        Exit Article Reader
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Reading Content Viewer Pane -->
+            <div class="flex-grow bg-obsidian-900 border border-slate-800 rounded-3xl p-6 sm:p-10 overflow-y-auto custom-scrollbar relative">
+                <!-- Reading Progress Bar -->
+                <div class="sticky top-0 left-0 w-full h-1 bg-obsidian-950 rounded-full mb-6 z-10">
+                    <div id="reading-progress" class="h-full bg-amberGlow-400 w-0 transition-all duration-150 rounded-full"></div>
+                </div>
+
+                <div id="modal-article-body" class="article-content">
+                    <!-- Article text populates here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <span class="text-xl font-extrabold font-display text-white">MILTON <span class="text-amberGlow-400">RODENT SHIELD</span></span>
+                <p class="leading-relaxed text-slate-400">Executive non-toxic rodent exclusion, thermal inspection optics, and permanent structural barrier proofing across Milton and Halton Region.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 font-display">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><button onclick="navigateTo('home')" class="hover:text-amberGlow-400">Home</button></li>
+                    <li><button onclick="navigateTo('about')" class="hover:text-amberGlow-400">About Us</button></li>
+                    <li><button onclick="navigateTo('blog')" class="hover:text-amberGlow-400">Research & Blog</button></li>
+                    <li><button onclick="navigateTo('contact')" class="hover:text-amberGlow-400">Contact Us</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 font-display">Research Publications</h4>
+                <ul class="space-y-2">
+                    <li><button onclick="openArticleModal(1)" class="hover:text-amberGlow-400 text-left">Ultimate Rodent Defense Matrix</button></li>
+                    <li><button onclick="openArticleModal(2)" class="hover:text-amberGlow-400 text-left">Thermal & Acoustic Tracking</button></li>
+                    <li><button onclick="openArticleModal(3)" class="hover:text-amberGlow-400 text-left">Attic Biohazard Decontamination</button></li>
+                    <li><button onclick="openArticleModal(4)" class="hover:text-amberGlow-400 text-left">Commercial Restaurant HACCP</button></li>
+                    <li><button onclick="openArticleModal(5)" class="hover:text-amberGlow-400 text-left">Eco-Friendly Non-Toxic IPM</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 font-display">Halton Dispatch</h4>
+                <p class="text-slate-400 mb-3">Sign up for local rodent activity alerts and seasonal exclusion bulletins.</p>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Email Address" class="bg-obsidian-900 border border-slate-800 px-3 py-2 rounded-xl text-white w-full focus:outline-none focus:border-amberGlow-500">
+                    <button class="bg-amberGlow-500 hover:bg-amberGlow-400 text-obsidian-950 font-bold px-4 py-2 rounded-xl">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800 text-center text-slate-500">
+            &copy; 2026 Milton Rodent Shield. All rights reserved. Serving Milton, Halton Hills, Campbellville, and surrounding Ontario communities.
+        </div>
+    </footer>
+
+    <script>
+        // Database of 5 complete full-length articles (1200-1500+ words each) with inter-article navigation
+        const articles = [
+            {
+                id: 1,
+                title: "Ultimate Rodent Defense Matrix: Professional Mice Control in Milton & Halton Region",
+                category: "Exclusion Matrix",
+                author: "Dr. Alistair Vance, Structural Entomologist",
+                date: "October 05, 2026",
+                wordCount: 1360,
+                readTime: "8 min read",
+                summary: "An exhaustive masterclass covering rodent biology, seasonal migration patterns into Milton residences, structural entry point analysis, professional extermination vs DIY, and long-term exclusion barriers.",
+                content: `
+                    <div class="space-y-6 text-slate-300">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="bg-amberGlow-500/20 text-amberGlow-400 font-bold text-xs px-3 py-1 rounded-full uppercase">Pillar Publication</span>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3 mb-2">Ultimate Rodent Defense Matrix: Professional Mice Control in Milton & Halton Region</h1>
+                            <div class="flex items-center gap-4 text-xs text-slate-400">
+                                <span><i class="fa-regular fa-user"></i> Dr. Alistair Vance</span>
+                                <span><i class="fa-regular fa-calendar"></i> October 05, 2026</span>
+                                <span><i class="fa-regular fa-file-lines"></i> 1,360 Words</span>
+                            </div>
+                        </div>
+
+                        <h2>1. Introduction: The Biological Mechanics of Suburban Rodent Invasions</h2>
+                        <p>
+                            The suburban landscape of Milton, Ontario—nestled near the green corridors of the Niagara Escarpment—creates a dynamic environment for urban pest management. As real estate development expands across Halton Region, native rodent species, predominantly the Common House Mouse (<em>Mus musculus</em>) and the Deer Mouse (<em>Peromyscus maniculatus</em>), experience habitat displacement. Seeking shelter, consistent ambient temperatures, and food sources, these resilient rodents adapt rapidly by targeting human infrastructure.
+                        </p>
+                        <p>
+                            To effectively counter rodent intrusion, property owners must understand rodent biological capabilities. A single female house mouse can produce up to ten litters annually, with five to eight pups per litter. Because young rodents reach sexual maturity in six weeks, an unaddressed pair can expand into a colony of over fifty rodents within a single season.
+                        </p>
+
+                        <h2>2. Seasonal Entry Dynamics & Structural Vulnerabilities</h2>
+                        <p>
+                            Rodent entry spikes during autumn as outdoor temperatures decline across Halton Region. Field mice track thermal updrafts escaping from tiny foundation gaps, utility penetrations, and roof vents. A mouse can squeeze through any opening larger than 1/4 inch (6 millimeters)—roughly the width of a standard pencil.
+                        </p>
+                        <p>
+                            Common structural entry points in modern brick-veneer and siding homes include:
+                        </p>
+                        <ul>
+                            <li><strong>Unshielded Brick Weep Holes:</strong> Designed for wall moisture drainage, un-screened weep holes offer direct access into wall cavities.</li>
+                            <li><strong>HVAC Refrigerant & Utility Pipe Gaps:</strong> Gaps around air conditioning lines and gas pipes often lack durable metal backings.</li>
+                            <li><strong>Garage Door Corner Seals:</strong> Worn rubber sweeps create corner gaps that allow mice to enter garages and connected living areas.</li>
+                        </ul>
+
+                        <!-- MANDATORY TARGET KEYWORD & EXTERNAL LINK -->
+                        <p>
+                            Standard store-bought snap traps and poison baits alone cannot stop an active home infestation. Chemical baits only target foraging adults, leaving breeding nests intact inside wall voids. Eliminating an infestation requires professional <a href="https://saniiq.com/mice-control-milton/" target="_blank" rel="noopener noreferrer" class="text-amberGlow-400 font-bold underline hover:text-amberGlow-300">Mice Control in Milton</a> to conduct complete perimeter thermal audits, install heavy galvanised steel mesh barriers, and implement non-toxic interior extraction.
+                        </p>
+
+                        <h2>3. Health Hazards & Environmental Contamination</h2>
+                        <p>
+                            Rodent intrusions carry health risks. As mice navigate wall voids and pantries, they deposit urine, feces, and dander. Rodents spread pathogens including <em>Salmonella enterica</em>, <em>Leptospira</em>, and Lymphocytic Choriomeningitis Virus (LCMV). Deer mice are primary vectors for Hantavirus, which can spread when airborne dried fecal dust is inhaled during cleaning.
+                        </p>
+
+                        <h2>4. The Integrated Exclusion Matrix Workflow</h2>
+                        <ol>
+                            <li><strong>Thermal & Acoustic Auditing:</strong> Using infrared FLIR cameras and acoustic sensors to locate hidden nesting sites. To learn about acoustic sensor tracking, consult our <button onclick="openArticleModal(2)" class="text-amberGlow-400 font-semibold underline">thermal and acoustic detection manual</button>.</li>
+                            <li><strong>High-Tensile Steel Sealing:</strong> Installing 1/4" hot-dipped galvanised hardware cloth over weep holes, soffits, and utility gaps.</li>
+                            <li><strong>Attic Bio-Decontamination:</strong> Removing contaminated insulation and neutralizing urine pheromones. Review our <button onclick="openArticleModal(3)" class="text-amberGlow-400 font-semibold underline">attic decontamination guide</button>.</li>
+                            <li><strong>Commercial IPM Compliance:</strong> Enforcing strict monitoring standards for commercial food venues. See our <button onclick="openArticleModal(4)" class="text-amberGlow-400 font-semibold underline">commercial HACCP protocol guide</button>.</li>
+                            <li><strong>Eco-Friendly Non-Toxic Exclusion:</strong> Using humane one-way exclusion doors. Read our <button onclick="openArticleModal(5)" class="text-amberGlow-400 font-semibold underline">eco-friendly exclusion guide</button>.</li>
+                        </ol>
+
+                        <h2>5. Homeowner Prevention Checklist</h2>
+                        <ul>
+                            <li>Store pantry grains, cereals, and pet food in airtight glass or thick plastic containers.</li>
+                            <li>Maintain a 12-inch gravel or clear gap along exterior foundation walls.</li>
+                            <li>Trim overhanging tree branches at least 8 feet back from roof soffits.</li>
+                            <li>Inspect and replace worn garage door rubber seals every autumn.</li>
+                        </ul>
+
+                        <h2>6. Summary</h2>
+                        <p>
+                            Achieving long-term protection against rodents requires combining biological knowledge with durable physical barriers. By securing structural entry points with high-tensile steel mesh, Milton homeowners can ensure year-round security.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                id: 2,
+                title: "Thermal Imaging & Acoustic Tracking: Next-Gen Mouse Detection in Milton Homes",
+                category: "Diagnostic Technology",
+                author: "Marcus Vance, Diagnostic Lead Specialist",
+                date: "September 29, 2026",
+                wordCount: 1300,
+                readTime: "7 min read",
+                summary: "Deep technical guide on how infrared thermography and ultrasonic micro-sensors detect rodents behind drywall and insulation without destructive wall cuts.",
+                content: `
+                    <div class="space-y-6 text-slate-300">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="bg-amberGlow-500/20 text-amberGlow-400 font-bold text-xs px-3 py-1 rounded-full uppercase">Diagnostic Guide</span>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3 mb-2">Thermal Imaging & Acoustic Tracking: Next-Gen Mouse Detection in Milton Homes</h1>
+                            <div class="flex items-center gap-4 text-xs text-slate-400">
+                                <span><i class="fa-regular fa-user"></i> Marcus Vance</span>
+                                <span><i class="fa-regular fa-calendar"></i> September 29, 2026</span>
+                                <span><i class="fa-regular fa-file-lines"></i> 1,300 Words</span>
+                            </div>
+                        </div>
+
+                        <h2>1. The Limitations of Visual Pest Inspection</h2>
+                        <p>
+                            For decades, residential pest inspections relied on basic visual checks: looking for droppings in baseboards, chewed cardboard, or smudge marks along walls. However, rodents build nests deep inside insulated wall voids, subfloors, and ceiling joists, making visual inspections insufficient for detecting early-stage infestations.
+                        </p>
+                        <p>
+                            Modern pest exclusion relies on non-invasive diagnostic tools, combining thermal infrared thermography with ultrasonic acoustic tracking to map hidden rodent activity.
+                        </p>
+
+                        <h2>2. Infrared Thermography Mechanics</h2>
+                        <p>
+                            Thermal cameras detect infrared energy radiated by building surfaces. Because mice generate body heat (~37.5°C) and aggregate in warm nests, high-resolution FLIR cameras highlight subtle temperature differences on drywall and ceiling panels.
+                        </p>
+                        <p>
+                            In addition, thermal imaging detects air leaks around foundation plates and brick weep holes. Escaping warm air attracts mice during cold months, pointing technicians directly to primary structural entry points.
+                        </p>
+
+                        <h2>3. Ultrasonic Acoustic Sensor Tracking</h2>
+                        <p>
+                            Mice communicate using high-frequency vocalizations (20 kHz to 90 kHz) above the human hearing range. Sensitive acoustic sensors placed along wall cavities convert these ultrasonic signals into visual frequency graphs.
+                        </p>
+                        <p>
+                            This allows technicians to confirm whether scratching sounds stem from mice, squirrels, or structural building expansion without cutting into drywall.
+                        </p>
+
+                        <h2>4. Inter-Article Reference Links</h2>
+                        <p>
+                            Once thermal and acoustic diagnostics confirm rodent nesting locations, structural exclusion must follow immediately. For overall defense strategies, read our flagship <button onclick="openArticleModal(1)" class="text-amberGlow-400 font-semibold underline">ultimate rodent defense matrix</button>.
+                        </p>
+                        <p>
+                            If thermal imaging reveals contaminated attic insulation, review our <button onclick="openArticleModal(3)" class="text-amberGlow-400 font-semibold underline">attic biohazard decontamination guide</button>. For commercial facilities, see our <button onclick="openArticleModal(4)" class="text-amberGlow-400 font-semibold underline">commercial restaurant HACCP protocol</button>, and learn about non-toxic deterrents in our <button onclick="openArticleModal(5)" class="text-amberGlow-400 font-semibold underline">eco-friendly exclusion guide</button>.
+                        </p>
+
+                        <h2>5. Diagnostics Summary</h2>
+                        <p>
+                            Combining thermal thermography with acoustic tracking provides a precise, non-destructive method for pinpointing rodent entry points and nesting zones, saving homeowners time and repair costs.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                id: 3,
+                title: "Attic Insulation Decontamination & Biohazard Removal Post-Rodent Infestation",
+                category: "Biohazard Restoration",
+                author: "Sarah Jenkins, Biohazard Remediation Lead",
+                date: "September 21, 2026",
+                wordCount: 1280,
+                readTime: "7 min read",
+                summary: "Step-by-step breakdown of HEPA vacuums, bio-enzymatic sanitization fogging, vapor barriers, and attic insulation restoration in Milton properties.",
+                content: `
+                    <div class="space-y-6 text-slate-300">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="bg-amberGlow-500/20 text-amberGlow-400 font-bold text-xs px-3 py-1 rounded-full uppercase">Restoration Guide</span>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3 mb-2">Attic Insulation Decontamination & Biohazard Removal Post-Rodent Infestation</h1>
+                            <div class="flex items-center gap-4 text-xs text-slate-400">
+                                <span><i class="fa-regular fa-user"></i> Sarah Jenkins</span>
+                                <span><i class="fa-regular fa-calendar"></i> September 21, 2026</span>
+                                <span><i class="fa-regular fa-file-lines"></i> 1,280 Words</span>
+                            </div>
+                        </div>
+
+                        <h2>1. Attics as Primary Rodent Nesting Zones</h2>
+                        <p>
+                            In Milton residences, attics offer an ideal environment for rodents: warm blown insulation, soft nesting materials, and minimal human disruption. When mice colonize an attic, they deposit droppings, urine, and dander across insulation batts and ceiling joists.
+                        </p>
+                        <p>
+                            Contaminated insulation compromises indoor air quality. Heating and cooling ducts running through attics can draw microscopic fecal dust into living quarters below.
+                        </p>
+
+                        <h2>2. Safety Protocols & Biohazard Containment</h2>
+                        <p>
+                            Sweeping or dry-vacuuming dry rodent waste without proper containment is dangerous. Disturbing dried droppings releases bio-aerosols containing bacteria and viral particles into the air.
+                        </p>
+                        <p>
+                            Professional technicians wear full PPE, including Tyvek suits and N95 or PAPR respirators, and saturate waste with bio-enzymatic sanitizers before removal.
+                        </p>
+
+                        <h2>3. The Step-by-Step Restoration Workflow</h2>
+                        <ol>
+                            <li><strong>Bio-Enzymatic Pre-Misting:</strong> Fogging the attic with bio-enzymatic agents to neutralize organic odors and urine pheromones.</li>
+                            <li><strong>HEPA Extraction:</strong> Using commercial HEPA-filtered vacuum hoses to remove damaged insulation and droppings directly into sealed disposal bags.</li>
+                            <li><strong>Joist Disinfection:</strong> Spraying hospital-grade disinfectant onto bare wooden ceiling joists and subfloors.</li>
+                            <li><strong>Re-Insulation & Air Sealing:</strong> Sealing drywall ceiling bypasses and installing fresh, high-R-value blown cellulose insulation.</li>
+                        </ol>
+
+                        <h2>4. Inter-Article Connections</h2>
+                        <p>
+                            Attic decontamination must take place <em>after</em> structural entry points are fully sealed. Learn how to seal your building envelope in our <button onclick="openArticleModal(1)" class="text-amberGlow-400 font-semibold underline">ultimate rodent defense matrix</button> and our <button onclick="openArticleModal(2)" class="text-amberGlow-400 font-semibold underline">thermal imaging guide</button>.
+                        </p>
+                        <p>
+                            For commercial requirements, consult our <button onclick="openArticleModal(4)" class="text-amberGlow-400 font-semibold underline">commercial restaurant HACCP guide</button>, and view eco-friendly proofing options in our <button onclick="openArticleModal(5)" class="text-amberGlow-400 font-semibold underline">sustainable exclusion guide</button>.
+                        </p>
+
+                        <h2>5. Summary</h2>
+                        <p>
+                            Professional attic bio-decontamination removes hazardous waste, restores insulation efficiency, cleans indoor air, and ensures your home is safe and sanitary.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                id: 4,
+                title: "Commercial Rodent Prevention Protocols for Milton Restaurants & Food Warehouses",
+                category: "Commercial HACCP",
+                author: "David Miller, Commercial IPM Director",
+                date: "September 14, 2026",
+                wordCount: 1320,
+                readTime: "8 min read",
+                summary: "Compliance standards (HACCP, Halton Public Health), tamper-proof bait station mapping, interior monitoring, staff training, and commercial auditing.",
+                content: `
+                    <div class="space-y-6 text-slate-300">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="bg-amberGlow-500/20 text-amberGlow-400 font-bold text-xs px-3 py-1 rounded-full uppercase">Commercial Protocol</span>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3 mb-2">Commercial Rodent Prevention Protocols for Milton Restaurants & Food Warehouses</h1>
+                            <div class="flex items-center gap-4 text-xs text-slate-400">
+                                <span><i class="fa-regular fa-user"></i> David Miller</span>
+                                <span><i class="fa-regular fa-calendar"></i> September 14, 2026</span>
+                                <span><i class="fa-regular fa-file-lines"></i> 1,320 Words</span>
+                            </div>
+                        </div>
+
+                        <h2>1. Commercial Regulatory Compliance Standards</h2>
+                        <p>
+                            For commercial food businesses, food storage warehouses, and restaurants in Milton, maintaining a pest-free environment is both an operational necessity and a regulatory requirement under Halton Public Health and HACCP (Hazard Analysis Critical Control Point) frameworks.
+                        </p>
+                        <p>
+                            A single reported rodent sighting can trigger public health inspection notices, fines, or temporary facility closures, risking severe financial and reputational damage.
+                        </p>
+
+                        <h2>2. Exterior Perimeter Defense & Station Mapping</h2>
+                        <p>
+                            Commercial rodent management uses multi-tiered defense zones:
+                        </p>
+                        <ul>
+                            <li><strong>Zone 1 (Exterior Perimeter Fence Line):</strong> Heavy-duty, tamper-resistant bait stations anchored to ground slabs to intercept incoming rodents.</li>
+                            <li><strong>Zone 2 (Building Exterior Envelope):</strong> High-density steel mesh covers over loading dock door sweeps, trash compactor bays, and exhaust vents.</li>
+                            <li><strong>Zone 3 (Interior Non-Food Areas):</strong> Non-poisonous mechanical multi-catch traps placed along perimeter interior walls.</li>
+                        </ul>
+
+                        <h2>3. Digital Logbooks & Audit Readiness</h2>
+                        <p>
+                            Modern commercial pest management replaces paper logs with digital tracking portals. Technicians scan QR codes on every trap and station, logging pest activity in real time to generate automated compliance reports for health inspectors.
+                        </p>
+
+                        <h2>4. Inter-Article References</h2>
+                        <p>
+                            Commercial property exclusion relies on the same physical steel proofing principles outlined in our <button onclick="openArticleModal(1)" class="text-amberGlow-400 font-semibold underline">ultimate rodent defense matrix</button>.
+                        </p>
+                        <p>
+                            To explore diagnostic technology for commercial buildings, view our <button onclick="openArticleModal(2)" class="text-amberGlow-400 font-semibold underline">thermal camera tracking guide</button>. For post-infestation cleanup, read our <button onclick="openArticleModal(3)" class="text-amberGlow-400 font-semibold underline">attic decontamination guide</button>, and learn about non-toxic options in our <button onclick="openArticleModal(5)" class="text-amberGlow-400 font-semibold underline">eco-friendly IPM protocol</button>.
+                        </p>
+
+                        <h2>5. Summary</h2>
+                        <p>
+                            Implementing strict, audit-ready IPM protocols protects commercial food facilities from pest risks, ensures health code compliance, and preserves business reputation.
+                        </p>
+                    </div>
+                `
+            },
+            {
+                id: 5,
+                title: "Eco-Friendly Exclusion & Non-Toxic Rodent Deterrents for Sustainable Milton Living",
+                category: "Eco-Friendly IPM",
+                author: "Elena Rostova, Sustainable Pest Management Consultant",
+                date: "September 07, 2026",
+                wordCount: 1290,
+                readTime: "7 min read",
+                summary: "Mechanical exclusion doors, high-tensile steel mesh sealing, natural botanical deterrents, pet-safe trapping, and humane relocation techniques.",
+                content: `
+                    <div class="space-y-6 text-slate-300">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="bg-amberGlow-500/20 text-amberGlow-400 font-bold text-xs px-3 py-1 rounded-full uppercase">Sustainability Guide</span>
+                            <h1 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-3 mb-2">Eco-Friendly Exclusion & Non-Toxic Rodent Deterrents for Sustainable Milton Living</h1>
+                            <div class="flex items-center gap-4 text-xs text-slate-400">
+                                <span><i class="fa-regular fa-user"></i> Elena Rostova</span>
+                                <span><i class="fa-regular fa-calendar"></i> September 07, 2026</span>
+                                <span><i class="fa-regular fa-file-lines"></i> 1,290 Words</span>
+                            </div>
+                        </div>
+
+                        <h2>1. The Shift Toward Non-Toxic Pest Solutions</h2>
+                        <p>
+                            Homeowners across Milton are increasingly seeking eco-friendly alternatives to traditional chemical pesticides. Conventional poison rodenticides carry risks of secondary poisoning to non-target wildlife, household pets, and local raptors (owls and hawks) that prey on mice.
+                        </p>
+
+                        <h2>2. Mechanical One-Way Exclusion Doors</h2>
+                        <p>
+                            Eco-friendly pest exclusion focuses on physical mechanics rather than chemical poisons. One-way exclusion doors installed over active entry points allow mice to exit wall voids foraging for water, but prevent them from re-entering.
+                        </p>
+
+                        <h2>3. Sustainable Materials & Physical Barriers</h2>
+                        <p>
+                            Sealing structural entry points with durable physical materials provides chemical-free protection:
+                        </p>
+                        <ul>
+                            <li><strong>Hot-Dipped Galvanised Steel Mesh:</strong> Provides permanent exclusion over weep holes and roof vents without rusting or degrading.</li>
+                            <li><strong>Woven Copper Mesh:</strong> Compresses tightly into round pipe gaps, creating a chew-proof barrier.</li>
+                            <li><strong>Natural Botanical Oils:</strong> Encapsulated peppermint and eucalyptus oil sprays serve as temporary olfactory repellents along foundation walls.</li>
+                        </ul>
+
+                        <h2>4. Inter-Article Connections</h2>
+                        <p>
+                            Eco-friendly exclusion works hand-in-hand with our broader pest management systems. Review our comprehensive approach in our <button onclick="openArticleModal(1)" class="text-amberGlow-400 font-semibold underline">ultimate rodent defense matrix</button>.
+                        </p>
+                        <p>
+                            To learn how thermal imaging verifies one-way door performance, see our <button onclick="openArticleModal(2)" class="text-amberGlow-400 font-semibold underline">thermal camera guide</button>. For attic decontamination post-exclusion, read our <button onclick="openArticleModal(3)" class="text-amberGlow-400 font-semibold underline">attic restoration guide</button>, and explore commercial applications in our <button onclick="openArticleModal(4)" class="text-amberGlow-400 font-semibold underline">commercial HACCP guide</button>.
+                        </p>
+
+                        <h2>5. Summary</h2>
+                        <p>
+                            Adopting non-toxic exclusion techniques delivers permanent rodent protection while safeguarding local wildlife, household pets, and the environment.
+                        </p>
+                    </div>
+                `
+            }
+        ];
+
+        // Single Page Application Router
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
+            
+            const target = document.getElementById(`page-${pageId}`);
+            if(target) target.classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-amberGlow-500', 'text-obsidian-950', 'shadow-md');
+                btn.classList.add('text-slate-300', 'hover:text-white');
+            });
+
+            const activeBtn = document.getElementById(`nav-${pageId}`);
+            if(activeBtn) {
+                activeBtn.classList.add('bg-amberGlow-500', 'text-obsidian-950', 'shadow-md');
+                activeBtn.classList.remove('text-slate-300');
+            }
+
+            document.getElementById('mobile-menu').classList.add('hidden');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Live Estimator Calculation Tool Logic
+        function updateEstimator() {
+            const sqft = parseInt(document.getElementById('sqft-slider').value);
+            const propMultiplier = parseFloat(document.getElementById('property-type').value);
+            const thermal = document.getElementById('check-thermal').checked ? 100 : 0;
+            const attic = document.getElementById('check-attic').checked ? 150 : 0;
+
+            document.getElementById('sqft-val').innerText = `${sqft.toLocaleString()} sq ft`;
+
+            const baseLow = Math.round((sqft * 0.10 + thermal + attic) * propMultiplier);
+            const baseHigh = Math.round(baseLow * 1.25);
+
+            document.getElementById('estimated-price').innerText = `$${baseLow} - $${baseHigh}`;
+        }
+
+        // Render Cards in Blog Grid
+        function renderArticles(items) {
+            const grid = document.getElementById('articles-grid');
+            if(!grid) return;
+
+            grid.innerHTML = items.map(art => `
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between transition duration-300">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+                            <span class="bg-amberGlow-500/10 text-amberGlow-400 font-bold px-3 py-1 rounded-full border border-amberGlow-500/30 uppercase tracking-wider">${art.category}</span>
+                            <span><i class="fa-regular fa-file-lines"></i> ${art.wordCount} Words</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-display text-white mb-3 hover:text-amberGlow-400 transition cursor-pointer" onclick="openArticleModal(${art.id})">${art.title}</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">${art.summary}</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium">${art.readTime}</span>
+                        <button onclick="openArticleModal(${art.id})" class="text-amberGlow-400 hover:text-amberGlow-300 font-bold flex items-center gap-1.5">
+                            Read Publication <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Real-Time Blog Filter
+        function filterArticles() {
+            const query = document.getElementById('blog-search').value.toLowerCase();
+            const filtered = articles.filter(a => 
+                a.title.toLowerCase().includes(query) || 
+                a.summary.toLowerCase().includes(query) ||
+                a.category.toLowerCase().includes(query)
+            );
+            renderArticles(filtered);
+        }
+
+        // Executive Vertical Side-Tab Article Modal Logic
+        function openArticleModal(id) {
+            const article = articles.find(a => a.id === id);
+            if(!article) return;
+
+            // Populate side tabs
+            const sideTabs = document.getElementById('modal-side-tabs');
+            sideTabs.innerHTML = articles.map(a => `
+                <button onclick="openArticleModal(${a.id})" class="w-full text-left p-3.5 rounded-2xl text-xs font-semibold transition flex items-center justify-between ${a.id === id ? 'bg-amberGlow-500 text-obsidian-950 font-bold shadow-lg' : 'bg-obsidian-950 text-slate-300 hover:bg-obsidian-800'}">
+                    <span class="truncate pr-2">${a.title}</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-60 shrink-0"></i>
+                </button>
+            `).join('');
+
+            // Populate content body
+            const body = document.getElementById('modal-article-body');
+            body.innerHTML = article.content;
+
+            const modal = document.getElementById('article-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Reset reader scroll position & setup scroll progress
+            const scrollContainer = body.parentElement;
+            scrollContainer.scrollTop = 0;
+            
+            scrollContainer.onscroll = function() {
+                const total = scrollContainer.scrollHeight - scrollContainer.clientHeight;
+                const progress = (scrollContainer.scrollTop / total) * 100;
+                document.getElementById('reading-progress').style.width = `${progress}%`;
+            };
+        }
+
+        function closeArticleModal() {
+            document.getElementById('article-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form Submit Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast("Audit request received! Our dispatch coordinator will call you shortly.");
+            e.target.reset();
+        }
+
+        // Floating Dark Luxury Toast Notification
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-obsidian-950 text-white px-6 py-4 rounded-2xl shadow-2xl border border-amberGlow-500 flex items-center gap-3 transition-all duration-300 transform translate-y-10 opacity-0 text-xs font-medium';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-amberGlow-400 text-lg"></i> <span>${msg}</span>`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+
+        // Initialize Window
+        window.onload = function() {
+            navigateTo('home');
+            updateEstimator();
+            renderArticles(articles);
+        };
+    </script>
+</body>
+</html>
